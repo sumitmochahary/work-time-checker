@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Work Time Checker",
+  "version": "1.0.0",
+  "description": "Calculate checkout time and remind you when your work hours are complete.",
+  "permissions": ["alarms", "storage", "notifications"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Work Time Checker"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "icons": {
+    "128": "work-time-icon.png"
+  }
+}
