@@ -68,8 +68,13 @@ export default function App() {
       active: true,
     };
 
+    // Remove any previous checkout alarm
+    await chrome.alarms.clear("work-time-checkout");
+
+    // Save current timer
     await saveTimer(timer);
 
+    // Create new checkout alarm
     await chrome.alarms.create("work-time-checkout", {
       when: timestamp,
     });

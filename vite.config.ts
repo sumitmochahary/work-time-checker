@@ -8,15 +8,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        popup: resolve(
-          import.meta.dirname,
-          "index.html"
-        ),
+        popup: resolve(import.meta.dirname, "index.html"),
+
+        checkout: resolve(import.meta.dirname, "checkout.html"),
 
         "service-worker": resolve(
           import.meta.dirname,
-          "src/background/service-worker.ts"
-        )
+          "src/background/service-worker.ts",
+        ),
       },
 
       output: {
@@ -30,9 +29,8 @@ export default defineConfig({
 
         chunkFileNames: "assets/[name]-[hash].js",
 
-        assetFileNames:
-          "assets/[name]-[hash][extname]"
-      }
-    }
-  }
+        assetFileNames: "assets/[name]-[hash][extname]",
+      },
+    },
+  },
 });
