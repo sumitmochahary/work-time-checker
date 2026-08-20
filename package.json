@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && node scripts/update-manifest-version.mjs && vite build",
+    "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "version": "node scripts/update-manifest-version.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",
